@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div>
+    <title>Wordle PPY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+      <div id="boardScore"></div>
+      <h1>Wordle PPY</h1>
+      <p id="wordAlert">Intenta adivinar la palabra secreta. Tienes 5 intentos.
+      </p>
+      <input type="text" id="guess-input" maxlength="5" placeholder="Ingrese la palabra.">
+      <p>⚠️Las palabras solo deben contener 5 letras.</p>
+      
+
+      <button id="help-button" class="button">AYUDA</button>
+      <button id="give-up-button" class="button">RENDIRSE</button>
+      
+      <div id="correct-letters" class="row">
+        
+      </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="winning-message" class="hiddenWinning"><h1>GANASTE!🏅</h1></div>
+        <div id="losing-message" class="hiddenLossing"><h1>PERDISTE!💀</h1></div>
+        <button id="guess-button" class="button">INTENTAR</button>
+        <button id="reset-button" class="button">NUEVO</button>
+      </div>
+    
+    </div>
+    
+  </body>
+</html>

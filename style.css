@@ -1,0 +1,169 @@
+body {
+  background-color: #b19c9c;
+  font-family:  sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#wordAlert {
+  margin: 20px auto;
+  font-size: 16px;
+  color: #666;
+}
+
+#guess-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #963e15;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* display: none; */
+}
+#guess-button, #reset-button{
+  display: none;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+#correct-letters{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.attempt-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+.letter-container {
+  border: 2px solid #ddd;
+  margin: 2px;
+  padding: 15px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.correct {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.incorrect {
+  background-color: #F44336;
+  color: #fff;
+}
+
+.partialCorrect {
+  background-color: #FFEB3B;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+#winning-message, #losing-message {
+  font-size: 24px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff;
+  display: none;
+}
+
+#winning-message {
+  background-color: #4CAF50;
+}
+
+#losing-message {
+  background-color: #F44336;
+}
+
+@media screen and (max-width: 600px) {
+  #guess-input, .button {
+      width: 90%;
+  }
+  #give-up-button, #boardScore {
+      position: fixed;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      font-size: 18px;
+  }
+  #give-up-button {
+      right: 10px;
+      top: 10px;
+      background-color: #FF5722;
+  }
+  #boardScore {
+      left: 10px;
+      top: 10px;
+      background-color: #9E9E9E;
+      color: white;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
